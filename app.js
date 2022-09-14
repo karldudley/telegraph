@@ -19,13 +19,14 @@ app.set('view engine', 'ejs');
 
 //middleware & static files - make css public
 app.use(express.static('public'));
-// middleware to parese the POST url data
+// middleware to parse the POST url data
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 //routes
 app.get('/', (req, res) => {
-  res.redirect('/blogs');
+  res.send("Hello!")
+  // res.redirect('/blogs');
 });
 
 app.get('/about', (req, res) => {
