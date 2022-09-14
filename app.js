@@ -4,15 +4,8 @@ const mongoose = require('mongoose');
 const Telegraph = require('./models/telegraph');
 const { render } = require('ejs');
 
-
-// const bodyParser = require('body-parser');
-// const cors = require('cors');
-
-
 // express app
 const app = express();
-// app.use(bodyParser.json())
-// app.use(cors())
 
 // connect to mongodb
 const dbURI = "mongodb+srv://futureproof:fppass@telegraph.ywckmek.mongodb.net/telegraph?retryWrites=true&w=majority"
@@ -73,43 +66,4 @@ app.use((req, res) => {
   res.status(404).render('404', { title: '404' });
 });
 
-  module.exports = app
-
-
-
-   // mongoose & mongo tests
-// app.get('/add-telegraph', (req, res) => {
-//   const telegraph = new Telegraph({
-//     title: 'new telegraph 2',
-//     name: 'my name 2',
-//     body: 'more about my new telegraph 2'
-//   })
-
-//   telegraph.save()
-//     .then(result => {
-//       res.send(result);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//     });
-// });
-
-// app.get('/all-telegraphs', (req, res) => {
-//   Telegraph.find()
-//     .then(result => {
-//       res.send(result);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//     });
-// });
-
-//   app.get('/single-telegraph', (req, res) => {
-//     Telegraph.findById('6321a8575063b51d59bb5b44')
-//       .then(result => {
-//         res.send(result);
-//       })
-//       .catch(err => {
-//         console.log(err);
-//       });
-//   });
+module.exports = app
