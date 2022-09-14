@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Telegraph = require('./models/telegraph');
 const { render } = require('ejs');
+let path = require('path');
 
 // express app
 const app = express();
@@ -16,6 +17,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // register view engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
 
 //middleware & static files - make css public
 app.use(express.static('public'));
