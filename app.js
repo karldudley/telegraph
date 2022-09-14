@@ -26,8 +26,8 @@ app.use(morgan('dev'));
 
 //routes
 app.get('/', (req, res) => {
-  // res.send("Hello!")
-  res.redirect('/blogs');
+  res.send("Hello!")
+  // res.redirect('/blogs');
 });
 
 app.get('/about', (req, res) => {
