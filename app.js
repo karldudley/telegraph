@@ -5,14 +5,14 @@ const Telegraph = require('./models/telegraph');
 const { render } = require('ejs');
 
 
-const bodyParser = require('body-parser');
-const cors = require('cors');
+// const bodyParser = require('body-parser');
+// const cors = require('cors');
 
 
 // express app
 const app = express();
-app.use(bodyParser.json())
-app.use(cors())
+// app.use(bodyParser.json())
+// app.use(cors())
 
 // connect to mongodb
 const dbURI = "mongodb+srv://futureproof:fppass@telegraph.ywckmek.mongodb.net/telegraph?retryWrites=true&w=majority"
