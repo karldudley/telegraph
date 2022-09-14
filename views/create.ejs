@@ -5,13 +5,13 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="create-blog content">
-    <form action="/blogs" method="POST">
+    <form autocomplete="off" action="/blogs" method="POST">
       <label for="title">Title:</label>
-      <input type="text" id="title" name="title" required>
+      <input type="text" id="title" name="title" placeholder="What's the title?" required>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" placeholder="Name or Pseudonym" required>
       <label for="body">Body:</label>
-      <textarea id="body" name="body" required></textarea>
+      <textarea id="body" name="body" placeholder="Tell us the whole story" required></textarea>
       <button>Submit</button>
     </form>
   </div>
