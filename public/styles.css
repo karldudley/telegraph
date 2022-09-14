@@ -9,7 +9,6 @@ body{
   margin: 20px auto;
   padding: 0 20px;
   font-family: 'Cinzel', serif;
-  max-width: 1200px;
 }
 p, h1, h2, h3, a, ul{
   margin: 0;
@@ -21,12 +20,12 @@ p, h1, h2, h3, a, ul{
 /* nav & footer styles */
 nav{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 60px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
   text-transform: uppercase;
-  max-width: 100%;
 }
 nav ul{
   display: flex;
