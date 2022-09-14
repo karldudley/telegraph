@@ -3,18 +3,16 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Telegraph = require('./models/telegraph');
 const { render } = require('ejs');
-const cors = require('cors')
+const port = process.env.PORT || 3000;
 
 // express app
 const app = express();
-app.use(cors())
-app.use(express.json())
 
 // connect to mongodb
 const dbURI = "mongodb+srv://futureproof:fppass@telegraph.ywckmek.mongodb.net/telegraph?retryWrites=true&w=majority"
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000, () => console.log(`\nExpress departing now from port 3000!\n`)))
+  .then(result => app.listen(port, () => console.log(`\nExpress departing now from port ${port}!\n`)))
   .catch(err => console.log(err));
 
 // register view engine
@@ -28,8 +26,8 @@ app.use(morgan('dev'));
 
 //routes
 app.get('/', (req, res) => {
-  res.send("Hello!")
-  // res.redirect('/blogs');
+  // res.send("Hello!")
+  res.redirect('/blogs');
 });
 
 app.get('/about', (req, res) => {
