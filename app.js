@@ -3,9 +3,12 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Telegraph = require('./models/telegraph');
 const { render } = require('ejs');
+const cors = require('cors')
 
 // express app
 const app = express();
+app.use(cors())
+app.use(express.json())
 
 // connect to mongodb
 const dbURI = "mongodb+srv://futureproof:fppass@telegraph.ywckmek.mongodb.net/telegraph?retryWrites=true&w=majority"
