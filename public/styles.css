@@ -26,6 +26,7 @@ nav{
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
   text-transform: uppercase;
+  max-width: 100%;
 }
 nav ul{
   display: flex;
