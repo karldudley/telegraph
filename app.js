@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Telegraph = require('./models/telegraph');
 const { render } = require('ejs');
+const { result } = require('lodash');
 const port = process.env.PORT || 3000;
 
 // express app
@@ -56,12 +57,34 @@ app.post('/blogs', (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-})
+});
 
 app.get('/blogs/create', (req, res) => {
   res.render('create', { title: "New Telegraph"});
 });
 
+app.get('/blogs/:id', (req, res) => {
+  const id = req.params.id;
+  Telegraph.findById(id)
+    .then(result => {
+      res.render('details', { blog: result, title: 'Blog Details'})
+    })
+    .catch(err => {
+      console.log(err);
+    })
+})
+
+app.delete('/blogs/:id', (req, res) => {
+  const id = req.params.id;
+
+  Telegraph.findByIdAndDelete(id)
+    .then(() => {
+      res.json({ redirect: '/blogs' })
+    })
+    .catch(err => {
+      console.log(err)
+    })
+})
 
   // 404 page
 app.use((req, res) => {
