@@ -14,21 +14,21 @@
 
 <body>
     <div class="container">
-        <form id="form-data">
+        <form id="form-data" action="http://localhost:3000/add-telegraph" method="POST">
             <div class="form-group title mt-5">
                 <label for="title"></label>
-                <input type="text" id="title"
-                    placeholder="Title">
+                <input name="title" type="text" id="title"
+                    placeholder="Title" required>
             </div>
             <div class="form-group name">
                 <label for="name"></label>
-                <input type="text" id="name"
-                    placeholder="Your name">
+                <input name="name" type="text" id="name"
+                    placeholder="Your name" required>
             </div>
             <div class="form-group story">
                 <label for="story"></label>
-                <textarea type="text" id="story" cols="30" rows="4"
-                    placeholder="Your story"></textarea>
+                <textarea name="body" type="text" id="story" cols="30" rows="4"
+                    placeholder="Your story" required></textarea>
             </div>
         
             <button type="submit" class="btn btn-primary">Submit</button>
