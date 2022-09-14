@@ -19,8 +19,11 @@
   "homepage": "https://github.com/karldudley/telegraph#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
-    "mongoose": "^6.6.0"
+    "lodash": "^4.17.21",
+    "mongoose": "^6.6.0",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
