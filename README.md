@@ -6,7 +6,7 @@ For this project we wanted to produce an anonymous message board where the posts
 
 ## Installation and usage
 
-Users should be able to input their title, name and story. Upon entering data, users should be able to submit their post and view all posts on a separate page.
+Users should be able to input their title, name and story. Upon entering data, users should be able to submit their post and view all posts on a separate page. Users can then click on individual posts to see the whole story. On the whole story page, users have the option to delete the post.
 
 ### To run the app you have a few options:
 1. Go to the deployed [site](https://telegraph-futureproof.herokuapp.com/) on Heroku (*Easiest Option*)
