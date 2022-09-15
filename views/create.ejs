@@ -5,6 +5,7 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="create-blog content">
+    <h2>New Telegraph</h2>
     <form autocomplete="off" action="/blogs" method="POST">
       <label for="title">Title:</label>
       <input type="text" id="title" name="title" placeholder="What's the title?" required>
@@ -12,7 +13,7 @@
       <input type="text" id="name" name="name" placeholder="Name or Pseudonym" required>
       <label for="body">Body:</label>
       <textarea id="body" name="body" placeholder="Tell us the whole story" required></textarea>
-      <button>Submit</button>
+      <button>Send Telegraph</button>
     </form>
   </div>
 

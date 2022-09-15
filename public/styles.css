@@ -112,12 +112,15 @@ textarea{
 }
 .create-blog button{
   margin-top: 20px;
-  background: var(--accent);
+  background: #777;
   color: white;
   padding: 6px;
   border: 0;
   font-size: 1.2em;
   cursor: pointer;
+}
+.create-blog button:hover {
+  background-color: var(--accent);
 }
 .text {
   font-family: 'Roboto', sans-serif;
