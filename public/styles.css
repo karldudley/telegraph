@@ -54,6 +54,12 @@ h2{
 h3{
   margin-bottom: 8px;
 }
+
+h3 a{
+  text-decoration: underline;
+  color: var(--accent);
+}
+
 .content{
   margin-left: 20px;
 }
